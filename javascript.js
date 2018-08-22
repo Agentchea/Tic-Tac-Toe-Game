@@ -15,7 +15,7 @@ const cells = document. querySelectorAll('cell');
 startGame();
 
 function startGame() {
-    document.querySelectorAll(".endgame").style.display = "none";
+    document.querySelector(".endgame").style.display = "none";
     origBoard = Array.from(Array(9).keys());  
     for (var i = 0; i < cells.length; i++) {
       cells[i].innerText = '';
@@ -28,6 +28,6 @@ function turnClick(square) {
     turn(square.target.id, humPlayer)
 }
 function turn(squareId, player) {
-    origBoard[squareID] = player;
+    origBoard[squareId] = player;
     document.getElementById(squareId).innerText = player;
 }
