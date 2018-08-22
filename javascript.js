@@ -11,11 +11,13 @@ const winCombos = [
     [0, 4, 8],
     [6, 4, 2]
 ]
-const cells = document. querySelectorAll('cell');
+const cells = document. querySelectorAll('.cell'); /* Also had .cell as "cell" which stopped the O's from showing up when the user would click in one of the
+boxes! */
 startGame();
 
 function startGame() {
-    document.querySelector(".endgame").style.display = "none";
+    document.querySelector(".endgame").style.display = "none"; /*in this line i had an issue where query selector should have been typed 
+    querySelector but was typed "querySelectorAll"*/
     origBoard = Array.from(Array(9).keys());  
     for (var i = 0; i < cells.length; i++) {
       cells[i].innerText = '';
